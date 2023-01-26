@@ -2,17 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 // import './Section.scss'
 import Image from './images/down-arrow.svg'
+import Fade from 'react-reveal/Fade';
 
 
 function Section({ title, description, backgroundImg, rightBtnText, leftBtnText}) {
   return (
     <>
     <Wrap bgImage={backgroundImg}>
+        <Fade bottom>
         <div className='itemtext'>
             <h1>{title}</h1>
             <p>{description}</p>
         </div>
+        </Fade>
         <div className='buttons'>
+            <Fade bottom>
         <div className='buttongroup'>
             <div className='leftbutton'>
                 {leftBtnText}
@@ -23,6 +27,7 @@ function Section({ title, description, backgroundImg, rightBtnText, leftBtnText}
             </div>
             }
         </div>
+            </Fade>
         <img className='downarrow' src={Image} alt="arrow" />
         </div>
     </Wrap>
